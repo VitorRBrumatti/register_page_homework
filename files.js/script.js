@@ -7,7 +7,7 @@ let errorText = document.getElementById("errorText");
 let errorEmail = document.getElementById("errorE");
 let errorSenha =  document.getElementById("errorSenha");
 let errorTelefone = document.getElementById("errorTelefone");
-let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const validade = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 function enviar() {
     if (!nome.value) { 
@@ -24,6 +24,10 @@ function enviar() {
         errorTelefone.innerText = "Insira seu Telefone para avançar" ; 
     
     }
+    else if (telefone.value.length < 11) {
+        errorTelefone.style.color = "orange";
+        errorTelefone.innerText = "Insira um telefone válido para avançar" ; 
+    }
     else {
         errorTelefone.style.color = "lime";
         errorTelefone.innerText = "Campo preenchido corretamente!" ; 
@@ -34,7 +38,7 @@ function enviar() {
         errorE.innerText = "Preencha com o email para avançar" ;
     
     }
-    else if(email.match(pattern)) {
+    else if(!email.match(validade)) {
         errorE.style.color = "orange";
         errorE.innerText = "Insira um E-mail válido" ;
      }
