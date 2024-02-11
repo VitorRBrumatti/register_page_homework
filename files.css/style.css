@@ -1,4 +1,149 @@
-form {
-    width: 30%;
-    height: 50%;
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header, .form-body {
+    height: 100vh;
+    background: linear-gradient(65deg, #0015ff, rgb(200, 236, 239) 100%);
+    display: flex;
+    color: white;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    height: 140px;
+}
+
+header .computer {
+    width: 700px;
+    height: 700px;
+}
+
+header h1 {
+    font-size: 90px;
+    font-weight: 900;
+}
+
+header h2 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+    gap: 100px;
+    padding: 100px;
+    color: white;
+    background-color: rgb(139, 145, 205);
+}
+
+main h2 {
+    font-size: 50px;
+}
+
+.cards {
+    display: flex;
+    gap: 80px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0 50px 0 50px;
+    width: 250px;
+    padding: 25px;
+    color: rgb(33, 36, 59);
+    text-align: center;
+    transition: 0.5s;
+}
+    .card:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 10px 10px rgba(33, 36, 59, 0.5)
+    }
+
+.card img {
+    height: 250px;
+    width: 250px;
+    border-radius: 0 50px 0 0;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card h4 {
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+footer {
+    padding: 25px;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(33, 36, 59);
+    font-weight: 600;
+}
+
+main button {
+    border: none;
+    padding: 18px 23px;
+    background-color: rgba(33, 36, 59, 0.5);
+    color: white;
+    border-radius: 40px;
+    font-size: 18px;
+    transition: .3s;
+    cursor: pointer;
+    transition: all .18s ease-in-out;
+}
+
+main button:hover {
+    text-shadow:
+    0 0 30px rgba(255,255,255, 1),
+    0 0 60px rgba(255, 255, 255, .8),
+    0 0 75px rgba(255, 255, 255, .6),
+    0 0 80px rgba(255, 255, 255, .4),
+    0 0 77px rgba(255, 255, 255, .5),
+    0 0 78px rgba(255, 255, 255, .4),
+    0 0 79px rgba(255, 255, 255, .3),
+    0 0 80px rgba(255, 255, 255, .2),
+    0 0 120px rgba(255, 255, 255, .1);
+}
+
+@media (max-width:768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    header {
+        height: 100vh;
+        background: linear-gradient(90deg, #0015ff, rgb(200, 236, 239) 100%);
+        flex-direction: column;
+        color: white;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+    header h1 {
+        font-size: 45px;
+        font-weight: 600;
+    }
+    
+    header h2 {
+        font-size: 35px;
+        font-weight: 300;
+    }
+    header .computer {
+        width: 500px;
+        height: 500px;
+    }
+    main h2 {
+        font-size: 30px;
+        font-weight: 750;
+    }
 }
