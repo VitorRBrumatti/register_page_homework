@@ -38,6 +38,12 @@ header, .form-body {
     }
 }
 
+#creator{
+    border: 2px;
+    padding: 10px;
+    background: #00000073; 
+}
+
 #credit{
     background: #000000d7;
     
