@@ -14,7 +14,7 @@
 <body>
 
     <section class="form-body">
-        <a href="computer.html" class="position-absolute top-0 start-0 fs-1 text-light ps-5 pt-4">
+        <a href="/cadastro.html" class="position-absolute top-0 start-0 fs-1 text-light ps-5 pt-4">
             <i class="bi bi-arrow-left border border-3 p-1 rounded-4 shadow-lg"></i>
         </a>
         <form class="border border-3 rounded-5 border-white p-4 border-opacity-50 shadow-lg">
@@ -40,7 +40,9 @@
                 <input type="password" class="form-control" id="senha" oninput="enviar()">
                 <div id="errorSenha" class="form-text"></div>
             </div>
-            <button type="button" class="btn btn-outline-light w-100" onclick="enviar()">Cadastrar</button>
+            <button type="button" class="btn btn-outline-light w-100" onclick="cadastrar()" id="button" 
+                data-bs-toggle="popover" data-bs-title="Parabéns! Cadastro finalizado!" data-bs-placement="bottom"
+                data-bs-content="Sua conta foi criada, agora redirecione-se para a página de login e acesse o conteúdo do site!" onmousemove="enviar()">Cadastrar</button>
         </form>
         <p class="justify-content-center d-flex text-uppercase position-absolute bottom-0 start-50 translate-middle-x">
             Criador: Vitor, aluno da G-School
