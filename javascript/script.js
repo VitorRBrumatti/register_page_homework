@@ -1,6 +1,7 @@
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
+
 let telefone = document.getElementById("telefone");
 let nome = document.getElementById("name");
 let termos = document.getElementById("termos");
@@ -78,8 +79,8 @@ function enviar() {
 }
 // resetar a página depois que concluir
 let button = document.querySelector("button")
-function cadastrar() {
-    button.addEventListener("click", () => {
-        window.location.reload();
-    });
+function cadastrar() {        
+        
+
+   alert(href="youtube.com")
 }

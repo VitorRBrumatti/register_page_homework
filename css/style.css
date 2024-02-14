@@ -14,8 +14,8 @@ header, .form-body {
     align-items: center;
     justify-content: center;
     animation-name: images;
-    animation-duration: 5s;
-    animation-duration: 15s; 
+    animation-duration: 3s;
+    animation-duration: 30s; 
     animation-timing-function: ease-in-out; 
     animation-iteration-count: infinite; 
 }
