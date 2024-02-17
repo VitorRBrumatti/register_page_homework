@@ -4,8 +4,7 @@ const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstra
 
 let telefone = document.getElementById("telefone");
 let nome = document.getElementById("name");
-let termos = document.getElementById("termos");
-let senha = document.getElementById("senha")
+let senha = document.getElementById("senha");
 let errorText = document.getElementById("errorText");
 let errorEmail = document.getElementById("errorE");
 let errorSenha =  document.getElementById("errorSenha");
@@ -79,8 +78,16 @@ function enviar() {
 }
 // resetar a página depois que concluir
 let button = document.querySelector("button")
-function cadastrar() {        
-        
+function cadastrar() { 
+    let data = {
+        name: nome.value,
+        telefone: telefone.value,
+        email: email.value,
+        senha: senha.value,
+    }       
+        fetch( "https://webhook.site/20eecd9f-4860-4db9-adc6-74cb0a37fa28"   ,{
+        method: "POST",
+        body: JSON.stringify(data)
 
-   alert(href="youtube.com")
+});
 }
