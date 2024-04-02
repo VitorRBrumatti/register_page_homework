@@ -11,8 +11,8 @@ let errorSenha =  document.getElementById("errorSenha");
 let errorTelefone = document.getElementById("errorTelefone");
 const validade = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-function enviar() {
-    let botaoDisable = document.getElementById("button")
+function cadastrar() {
+    let botaoDisable = document.getElementById("button");
     let email = document.getElementById("email").value;
 // validação do nome
     if (!nome.value) { 
@@ -75,19 +75,24 @@ function enviar() {
         errorSenha.innerText = "Campo Preenchido corretamente" ;
         botaoDisable.disabled = false;
     }
-}
-// resetar a página depois que concluir
-let button = document.querySelector("button")
-function cadastrar() { 
-    let data = {
-        name: nome.value,
-        telefone: telefone.value,
-        email: email.value,
-        senha: senha.value,
-    }       
-        fetch( "https://webhook.site/20eecd9f-4860-4db9-adc6-74cb0a37fa28"   ,{
-        method: "POST",
-        body: JSON.stringify(data)
 
-});
+
+    if (!botaoDisable.disabled) {
+    
+        let data = {
+            name: nome.value,
+            email: email.value,
+            phone: telefone.value,
+            password: senha.value,
+        }       
+            fetch( "http://127.0.0.1:8000/api/form"   ,{
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            }
+    
+            }).then(res => res.json()).then(data => console.log(data));
+    
+    }
 }
